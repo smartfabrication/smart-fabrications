@@ -45,7 +45,6 @@
     .animate-up { animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
     .delay-1 { animation-delay: 0.3s; }
 
-    /* Glassmorphism Header */
     header {
       position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
       background: rgba(15, 16, 20, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -58,56 +57,39 @@
     .tagline { color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; }
     
     .header-nav { display: flex; gap: 15px; }
+    
     .menu-btn {
       color: var(--text-light); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; padding: 0.8rem 1.5rem;
       border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; transition: all 0.4s ease;
     }
     .menu-btn:hover { background: var(--accent-gold); border-color: var(--accent-gold); color: var(--primary-dark); }
 
-    /* About Page Hero */
     .about-hero {
       position: relative; height: 50vh; min-height: 450px; display: flex; align-items: center; justify-content: center; text-align: center;
       background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
       margin-bottom: 4rem;
     }
-    .about-hero::before {
-      content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,16,20,0.7) 0%, rgba(15,16,20,0.9) 100%);
-    }
+    .about-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,16,20,0.7) 0%, rgba(15,16,20,0.9) 100%); }
     .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 2rem; }
     .hero-content h1 { color: var(--text-light); font-size: clamp(2.5rem, 4vw, 4rem); margin-bottom: 1rem; letter-spacing: 2px; }
     .hero-content p { color: var(--accent-gold); font-size: clamp(1rem, 1.5vw, 1.2rem); text-transform: uppercase; letter-spacing: 3px; }
 
-    /* Story Section */
-    .story-container {
-      max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; align-items: center;
-    }
+    .story-container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; align-items: center; }
     .story-text { flex: 1 1 500px; }
     .story-text h2 { font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--primary-dark); line-height: 1.2; }
     .story-text p { font-size: 1.1rem; color: #555; margin-bottom: 1.5rem; line-height: 1.8; }
-    .story-image {
-      flex: 1 1 400px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-    .story-image img { width: 100%; display: block; object-fit: cover; }
-    .story-image::after {
-      content: ''; position: absolute; inset: 0; border: 2px solid var(--accent-gold); border-radius: 12px; transform: translate(15px, 15px); z-index: -1;
-    }
+    .story-image { flex: 1 1 400px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .story-image img { width: 100%; height: 350px; display: block; object-fit: cover; }
+    .story-image::after { content: ''; position: absolute; inset: 0; border: 2px solid var(--accent-gold); border-radius: 12px; transform: translate(15px, 15px); z-index: -1; }
 
-    /* Core Pillars */
-    .pillars-section {
-      background: var(--primary-dark); color: var(--text-light); padding: 6rem 5%; margin: 4rem 0; text-align: center;
-    }
-    .pillars-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1200px; margin: 3rem auto 0;
-    }
-    .pillar-card {
-      background: var(--secondary-dark); padding: 3rem 2rem; border-radius: 8px; border-top: 3px solid var(--accent-gold); transition: transform 0.3s;
-    }
+    .pillars-section { background: var(--primary-dark); color: var(--text-light); padding: 6rem 5%; margin: 4rem 0; text-align: center; }
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1200px; margin: 3rem auto 0; }
+    .pillar-card { background: var(--secondary-dark); padding: 3rem 2rem; border-radius: 8px; border-top: 3px solid var(--accent-gold); transition: transform 0.3s; }
     .pillar-card:hover { transform: translateY(-10px); }
     .pillar-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1.5rem; }
     .pillar-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
     .pillar-card p { color: var(--text-dim); font-size: 0.95rem; }
 
-    /* Footer */
     footer { background: var(--primary-dark); color: var(--text-light); padding: 5rem 5% 3rem; text-align: center; border-top: 1px solid #2a2a2a; }
     .contact-details { display: flex; justify-content: center; gap: 4rem; margin: 3rem auto; flex-wrap: wrap; max-width: 1000px; }
     .contact-item { text-align: center; flex: 1 1 250px; }
@@ -144,7 +126,7 @@
     
     <div class="header-nav">
       <a href="index.html" class="menu-btn">Home</a>
-      <a href="brochure.html" target="_blank" class="menu-btn">Brochure</a>
+      <a href="brochure.html" class="menu-btn">Brochure</a>
     </div>
   </header>
 
@@ -165,8 +147,10 @@
         With a strong focus on custom designs and precision manufacturing, our team ensures every product meets your exact specifications and exceeds expectations. Whether it’s for commercial, industrial, or residential applications, we are dedicated to turning your ideas into durable, functional, and aesthetically pleasing results.
       </p>
     </div>
+    
+    <!-- Local media folder image path -->
     <div class="story-image">
-      <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Engineering Workshop">
+      <img src="media/workshop.jpg" alt="Engineering Workshop">
     </div>
   </section>
 
