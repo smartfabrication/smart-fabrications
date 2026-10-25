@@ -120,8 +120,10 @@
     .marquee-track:hover { animation-play-state: paused; }
 
     .media-right { flex: 1 1 50%; display: flex; flex-direction: column; justify-content: center; padding: 3rem 8%; }
+    
+    /* IN-PAGE VIDEO WRAPPER */
     .video-wrapper { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .video-wrapper video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     footer { background: var(--primary-dark); color: var(--text-light); padding: 5rem 5% 3rem; text-align: center; border-top: 1px solid #2a2a2a; }
     .contact-details { display: flex; justify-content: center; gap: 4rem; margin: 3rem auto; flex-wrap: wrap; max-width: 1000px; }
@@ -261,7 +263,7 @@
     </div>
   </section>
 
-  <!-- AUTO-NUMBERED MEDIA SHOWCASE WITH EXTENSION SUPPORT -->
+  <!-- AUTO-NUMBERED MEDIA SHOWCASE WITH IN-PAGE YOUTUBE PLAYER -->
   <section class="media-showcase">
     <div class="showcase-header">
       <span class="section-label" style="display: inline-block; margin-bottom: 0.5rem;">04. Showcase</span>
@@ -273,7 +275,9 @@
     </div>
     
     <div class="media-right">
-      <div class="video-wrapper" id="videoContainer"></div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/o5z2IJ7PaIw" title="Smart Fabrications LLC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
@@ -310,6 +314,7 @@
   </footer>
 
   <script>
+    // Marquee Auto Image Scroller Script
     const track = document.getElementById('marqueeTrack');
     const maxImages = 30; // Scans from 1 up to 30 images in media/ folder
     const extensions = ['jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG'];
@@ -345,20 +350,6 @@
       testImg.onload = () => callback(imgPath);
       testImg.onerror = () => checkExtension(num, extIndex + 1, callback);
     }
-
-    const videoContainer = document.getElementById('videoContainer');
-    const videoPath = 'media/video.mp4';
-    
-    const testVideo = document.createElement('video');
-    testVideo.src = videoPath;
-    testVideo.onloadeddata = function() {
-      videoContainer.innerHTML = `
-        <video controls autoplay muted loop>
-          <source src="${videoPath}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      `;
-    };
   </script>
 
 </body>
