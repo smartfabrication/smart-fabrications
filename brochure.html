@@ -62,12 +62,12 @@
       color: var(--text-light); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; padding: 0.8rem 1.5rem;
       border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; transition: all 0.4s ease;
     }
-    .menu-btn:hover { background: var(--accent-gold); border-color: var(--accent-gold); color: var(--primary-dark); }
+    .menu-btn:hover, .menu-btn.active { background: var(--accent-gold); border-color: var(--accent-gold); color: var(--primary-dark); }
 
     /* Brochure Hero */
     .brochure-hero {
       position: relative; height: 55vh; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center;
-      background: url('https://images.unsplash.com/photo-1541888079813-1456208a8f15?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      background: url('media/broucher/interior_2.jpg') center/cover no-repeat;
     }
     .brochure-hero::before {
       content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,16,20,0.8) 0%, rgba(15,16,20,0.95) 100%);
@@ -106,7 +106,7 @@
     .media-left::after { right: 0; background: linear-gradient(to left, var(--secondary-dark), transparent); }
     
     .marquee-track { display: flex; gap: 25px; animation: scroll 30s linear infinite; width: max-content; padding-left: 25px; }
-    .marquee-track img { height: 400px; width: auto; max-width: 650px; object-fit: contain; border-radius: 10px; background-color: #121318; box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+    .marquee-track img { height: 400px; width: auto; max-width: 650px; object-fit: cover; border-radius: 10px; background-color: #121318; box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
     @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
     /* Footer */
@@ -164,8 +164,9 @@
     </div>
   </section>
 
+  <!-- 01. Food Industry / Kitchen Equipments -->
   <section class="catalog-section">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/kitchen1.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">01. Food Industry</span>
       <h2 class="serif">Kitchen Equipments</h2>
@@ -185,8 +186,9 @@
     </div>
   </section>
 
+  <!-- 02. Architecture / Interior & Exterior -->
   <section class="catalog-section reverse dark">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/interior.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">02. Architecture</span>
       <h2 class="serif">Interior & Exterior</h2>
@@ -206,8 +208,9 @@
     </div>
   </section>
 
+  <!-- 03. Structural Enclosures / Glass & Aluminium -->
   <section class="catalog-section">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/glass.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">03. Structural Enclosures</span>
       <h2 class="serif">Glass & Aluminium</h2>
@@ -226,8 +229,9 @@
     </div>
   </section>
 
+  <!-- 04. Protection / Safety Solutions & Bollards -->
   <section class="catalog-section reverse dark">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1584442628467-36e6e2bf1eb9?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/bollard.jpg'); background-size: cover; background-position: center;"></div>
     <div class="catalog-content">
       <span class="catalog-label">04. Protection</span>
       <h2 class="serif">Safety Solutions & Bollards</h2>
@@ -252,8 +256,9 @@
     </div>
   </section>
 
+  <!-- 05. Public Infrastructure / Bicycle Racks -->
   <section class="catalog-section">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/bicycle.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">05. Public Infrastructure</span>
       <h2 class="serif">Bicycle Racks</h2>
@@ -267,8 +272,9 @@
     </div>
   </section>
 
+  <!-- 06. Outdoor Aesthetics / Landscaping -->
   <section class="catalog-section reverse dark">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f0a?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/landscape.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">06. Outdoor Aesthetics</span>
       <h2 class="serif">Landscaping</h2>
@@ -283,8 +289,9 @@
     </div>
   </section>
 
+  <!-- 07. Healthcare Grade / Medical Equipment's -->
   <section class="catalog-section">
-    <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80');"></div>
+    <div class="catalog-image" style="background-image: url('media/broucher/medical.jpg');"></div>
     <div class="catalog-content">
       <span class="catalog-label">07. Healthcare Grade</span>
       <h2 class="serif">Medical Equipment's</h2>
